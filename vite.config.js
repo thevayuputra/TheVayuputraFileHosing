@@ -141,7 +141,8 @@ export default ({ mode }) => {
       }
     ],
     // during development run at root, but use GH pages subpath for production
-    base: mode === 'production' ? '/SimpleFileHosing/' : '/',
+    // base path must match the GitHub Pages repository name (see package.json homepage)
+    base: mode === 'production' ? '/TheVayuputraFileHosing/' : '/',
     resolve: {
       alias: [
         { find: "@", replacement: fileURLToPath(new URL('./src', import.meta.url)) }
