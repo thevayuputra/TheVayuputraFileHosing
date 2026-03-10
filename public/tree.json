@@ -1,0 +1,48 @@
+{
+  "tree": [
+    {
+      "path": "3.jpg",
+      "isDirectory": false
+    },
+    {
+      "path": "File1.txt",
+      "isDirectory": false
+    },
+    {
+      "path": "File2.txt",
+      "isDirectory": false
+    },
+    {
+      "path": "Folder1",
+      "isDirectory": true
+    },
+    {
+      "path": "Folder1/1.jpg",
+      "isDirectory": false
+    },
+    {
+      "path": "Folder1/File1.txt",
+      "isDirectory": false
+    },
+    {
+      "path": "Folder1/File2.txt",
+      "isDirectory": false
+    },
+    {
+      "path": "Folder2",
+      "isDirectory": true
+    },
+    {
+      "path": "Folder2/2.jpg",
+      "isDirectory": false
+    },
+    {
+      "path": "Folder2/File1.txt",
+      "isDirectory": false
+    },
+    {
+      "path": "Folder2/File2.txt",
+      "isDirectory": false
+    }
+  ]
+}

@@ -5,9 +5,10 @@
   "private": true,
   "scripts": {
     "serve": "vite preview --port 8080",
-    "build": "vite build",
+    "build": "npm run gen-tree && vite build",
+    "gen-tree": "node scripts/generateTree.js",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src",
-    "dev": "vite"
+    "dev": "npm run gen-tree && vite"
   },
   "dependencies": {
     "vue": "^3.3.6",

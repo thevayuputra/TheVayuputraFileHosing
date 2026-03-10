@@ -202,9 +202,11 @@ export default defineComponent({
     async function load() {
       try {
         error.value = '';
-        const res = await fetch('/api/tree');
+        // in production there's no server middleware, so use pre‑generated JSON
+        const url = `${import.meta.env.BASE_URL}tree.json`;
+        const res = await fetch(url);
         if (!res.ok) {
-          throw new Error(await res.text());
+          throw new Error(`HTTP ${res.status}: ${res.statusText}`);
         }
 
         const data = await res.json();
