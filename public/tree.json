@@ -9,10 +9,6 @@
       "isDirectory": false
     },
     {
-      "path": "File2.txt",
-      "isDirectory": false
-    },
-    {
       "path": "Folder1",
       "isDirectory": true
     },
