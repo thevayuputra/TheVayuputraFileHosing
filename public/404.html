@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="0; URL=/#%2F" />
+    <script>
+      // If arriving at a deep link like /game-projects, rewrite to /#/game-projects
+      (function () {
+        try {
+          var path = decodeURIComponent(location.pathname + location.search + location.hash);
+          if (path && path !== '/' && !path.startsWith('/#/')) {
+            var target = '/#' + path;
+            location.replace(target);
+          } else {
+            // default redirect to root of SPA
+            location.replace('/#/');
+          }
+        } catch (e) {
+          location.replace('/#/');
+        }
+      })();
+    </script>
+    <title>Redirecting...</title>
+  </head>
+  <body>
+    Redirecting...
+  </body>
+</html>
