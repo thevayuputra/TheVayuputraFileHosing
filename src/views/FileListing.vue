@@ -175,8 +175,11 @@ export default defineComponent({
     }
 
     const toPublicUrl = (filePath: string) => {
-      const normalized = filePath.replace(/^\/+/, '');
-      return new URL(`/${normalized}`, window.location.origin).toString();
+      // strip leading slashes or hash fragments (in case URL has been mangled)
+      const normalized = filePath.replace(/^\/+/, '').replace(/^#\/+/, '');
+      // always include the base URL prefix so GH‑Pages subpath is respected
+      const base = import.meta.env.BASE_URL || '/';
+      return new URL(`${base}${normalized}`, window.location.origin).toString();
     };
 
     const copyFileUrl = async (filePath: string) => {
