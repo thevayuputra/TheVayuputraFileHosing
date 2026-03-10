@@ -1,7 +1,7 @@
 {
   "name": "Simple File Hosting",
   "version": "0.1.0",
-  "homepage": "https://example.com",
+  "homepage": "https://savaliyamanish.github.io/SimpleFileHosing/",
   "private": true,
   "scripts": {
     "serve": "vite preview --port 8080",

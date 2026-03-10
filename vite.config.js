@@ -140,7 +140,8 @@ export default ({ mode }) => {
         }
       }
     ],
-    base: '/',
+    // during development run at root, but use GH pages subpath for production
+    base: mode === 'production' ? '/SimpleFileHosing/' : '/',
     resolve: {
       alias: [
         { find: "@", replacement: fileURLToPath(new URL('./src', import.meta.url)) }
